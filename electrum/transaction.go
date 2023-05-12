@@ -58,11 +58,12 @@ type Vout struct {
 
 // ScriptPubkey represents the script of that transaction output.
 type ScriptPubkey struct {
-	Addresses string `json:"address,omitempty"`
-	Asm       string `json:"asm"`
-	Hex       string `json:"hex,omitempty"`
-	ReqSigs   uint32 `json:"reqsigs,omitempty"`
-	Type      string `json:"type"`
+	Addresses    string   `json:"address,omitempty"`
+	AddressSlice []string `json:"addresses,omitempty"`
+	Asm          string   `json:"asm"`
+	Hex          string   `json:"hex,omitempty"`
+	ReqSigs      uint32   `json:"reqsigs,omitempty"`
+	Type         string   `json:"type"`
 }
 
 // GetTransaction gets the detailed information for a transaction.
